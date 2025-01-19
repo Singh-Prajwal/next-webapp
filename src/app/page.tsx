@@ -1,72 +1,13 @@
-// import { Company } from "@/types";
-
-// type HomePageProps = {
-//   companies: Company[];
-// };
-
-// export async function getStaticProps() {
-//   // Simulate fetching data (Replace with API calls if needed)
-//   const companies: Company[] = [
-//     {
-//       id: 1,
-//       name: "TechCorp",
-//       details: "A leading tech company.",
-//       directors: ["Alice Johnson", "Bob Smith"],
-//     },
-//     {
-//       id: 2,
-//       name: "MediCare",
-//       details: "Healthcare innovators.",
-//       directors: ["Carol Lee", "David Brown"],
-//     },
-//     {
-//       id: 3,
-//       name: "EcoWorld",
-//       details: "Sustainability pioneers.",
-//       directors: ["Eve Green", "Frank White"],
-//     },
-//   ];
-
-//   return {
-//     props: {
-//       companies,
-//     },
-//   };
-// }
-
-// export default function HomePage({ companies }: HomePageProps) {
-//   return (
-//     <div className="min-h-screen p-4 bg-gray-50">
-//       <h1 className="text-2xl font-bold mb-4">Company Directory</h1>
-//       <div className="grid md:grid-cols-3 gap-4">
-//         {companies.map((company) => (
-//           <div key={company.id} className="p-4 bg-white shadow rounded">
-//             <h2 className="text-xl font-bold">{company.name}</h2>
-//             <p>{company.details}</p>
-//             <h3 className="mt-4 font-semibold">Directors:</h3>
-//             <ul className="list-disc list-inside">
-//               {company.directors.map((director) => (
-//                 <li key={director}>{director}</li>
-//               ))}
-//             </ul>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
 "use client";
 
 import { useState } from "react";
-// import { companies } from "../data";
+import { companies } from "../data";
 import CompanyList from "../components/companyList";
 import CompanyDetails from "../components/companyDetails";
 import { Company } from "@/types";
 
 export default function HomePage() {
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
-  const companies: Company[] = [];
   const handleSelect = (id: number) => {
     const company = companies.find((comp) => comp.id === id) || null;
     setSelectedCompany(company);
