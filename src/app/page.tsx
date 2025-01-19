@@ -55,8 +55,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="bg-gray-600 text-white text-center py-4 sticky bottom-0 mt-auto">
         <p>
-          &copy; {new Date().getFullYear()} My Company Directory. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} RegisterKaro. All rights reserved.
         </p>
       </footer>
     </div>
