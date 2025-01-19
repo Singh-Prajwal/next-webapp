@@ -9,7 +9,7 @@ export default function CompanyDetails({ company }: Props) {
     return <p className="text-gray-500">Select a company to view details.</p>;
 
   return (
-    <div className="p-4 bg-white shadow rounded">
+    <div className="p-4 bg-white shadow rounded bg-blue-100 ">
       <h2 className="text-xl font-bold">{company.name}</h2>
       <p>{company.details}</p>
       <h3 className="mt-4 font-semibold">Directors:</h3>
